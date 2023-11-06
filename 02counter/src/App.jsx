@@ -4,19 +4,30 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let counter = 15;
+  let [counter, setCounter] = useState(15);
   const increment = ()=>{
     console.log("clicked", counter);
-    counter = counter + 1;
+    if(counter <=20){
+    // counter = counter + 1;
+    setCounter(counter +1);
+    console.log(" clicked after increment ", counter);
+    }
+  }
+  const decrement = ()=>{
+    console.log("counter", counter);
+    if(counter>=1){
+    // counter = counter - 1;
+    setCounter(counter-1);
+    }
   }
 
   return (
     <>
      <h1>Chai aur react {counter}</h1>
      <h3>counter : {counter} </h3>
-     <button onClick ={increment} >Increment : {counter}</button>
+     <button onClick ={increment} >Increment : {counter} </button>
      <br></br>
-     <button>Decrement : {counter} </button>
+     <button onClick={decrement} >Decrement : {counter} </button>
      <footer> {counter} </footer>
     </>
   )
