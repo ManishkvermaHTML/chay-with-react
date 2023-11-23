@@ -9,7 +9,14 @@ function App() {
     console.log("clicked", counter);
     if(counter <=20){
     // counter = counter + 1;
-    setCounter(counter +1);
+    
+    setCounter(prevcounter=>prevcounter + 1);//inline js
+    setCounter((prevcounter)=> { return(prevcounter + 1)});
+    setCounter((prevcounter)=> { return(prevcounter + 1)});
+    // setCounter(counter +1);
+    // setCounter(counter +1);
+    // setCounter(counter +1);
+
     console.log(" clicked after increment ", counter);
     }
   }
