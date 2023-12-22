@@ -32,14 +32,14 @@ function App() {
    
   return (
     <>
-      <div className="text-center  w-[70%] mxa-w-md mx-auto my-5 bg-slate-900 px-4 py-8 rounded-lg shadow-sm">
+      <div className="text-center  w-[70%] mxa-w-md mx-auto my-5 bg-slate-500 px-4 py-8 rounded-lg shadow-sm">
         <h1 className="text-white font-mono font-bold text-3xl mb-4 underline ">
           Password Generator
         </h1>
         <div className="flex justify-center shadow rounded-lg mb-4 overflow-hidden">
           <input
             type="text"
-            className="outline-none w-[70%] py-3 px-4 rounded-l-lg text-xl "
+            className="outline-none w-[70%] py-3 px-4 rounded-l-lg text-2xl font-semibold "
             value={password}
             placeholder="password"
             readOnly
